@@ -1,23 +1,16 @@
-import logo from './assets/img/LiveDune.svg';
-import './App.css';
+import { Route } from 'react-router-dom';
+import './App.sass';
+
+import { Login, Register, PassReset, EmailConfirmation } from './pages';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'>
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className='container'>
+      <Route exact path='/' component={Login} />
+      <Route exact path='/reg' component={Register} />
+      <Route exact path='/reset' component={PassReset} />
+      <Route exact path='/confirmation' component={EmailConfirmation} />
+    </main>
   );
 }
 

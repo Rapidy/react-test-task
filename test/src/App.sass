@@ -1,0 +1,70 @@
+.container
+  max-width: 1340px
+  margin: 0 auto
+
+button
+  outline: none
+  border: none
+  background: none
+  cursor: pointer
+
+input
+  &:focus
+    outline: none
+
+a
+  color: #4e74f5
+  text-decoration: none
+  font-weight: 700
+  font-size: 14px
+
+*
+  transition: .2s
+
+h1, h2, h3, h4, h5, h6, p
+  margin: 0
+
+.content
+  margin: 0 auto
+  margin-top: 38px
+  text-align: center
+  h1
+    font-weight: 600
+    font-size: 56px
+    margin-bottom: 16px
+  span
+    color: #999
+    display: inline-block
+    margin-bottom: 16px
+  .error
+    color: #FB2424
+    margin-top: 5px
+  &-inputs
+    display: flex
+    flex-direction: column
+    input
+      padding: 20px 16px
+      border: 1px solid #E6E6E6
+      border-radius: 12px
+      &.wrong
+        border: 1px solid #F90043
+      &::placeholder
+        color: #e6e6e6
+      &:not(:last-of-type)
+        margin-bottom: 16px
+      &:focus
+        border: 1px solid #4E74F5
+
+.auth-content
+  width: 500px
+  button
+    width: 100%
+    margin-top: 32px
+    margin-bottom: 24px
+  &-btns
+    display: flex
+    margin: 16px 0
+    button
+      width: 50%
+      &:not(:last-of-type)
+        margin-right: 16px
