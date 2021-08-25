@@ -30,6 +30,12 @@ export default function Header(props) {
           </NavLink>
         </div>
       )}
+
+      {props.type === 'isReg' && (
+        <div className='header-btns'>
+          <NavLink to='/'>Выйти</NavLink>
+        </div>
+      )}
     </header>
   );
 }

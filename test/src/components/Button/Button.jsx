@@ -5,7 +5,7 @@ export default function Button(props) {
   return (
     <button className={props.class} onClick={() => props.onClick && props.onClick()}>
       {props.icon && <img src={props.icon} alt='Social Media Icon' />}
-      {props.children}
+      <p>{props.children}</p>
     </button>
   );
 }

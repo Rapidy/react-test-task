@@ -1,12 +1,9 @@
 .container
-  max-width: 1340px
+  max-width: 1320px
   margin: 0 auto
 
-button
-  outline: none
-  border: none
-  background: none
-  cursor: pointer
+body
+  padding: 0 10px 20px
 
 input
   &:focus
@@ -24,6 +21,44 @@ a
 h1, h2, h3, h4, h5, h6, p
   margin: 0
 
+.confirmation-content
+  max-width: 680px
+  .content-inputs
+    max-width: 420px
+    margin: 16px auto 0
+  span
+    line-height: 30px
+  button
+    padding: 22px 87px
+    margin-top: 24px
+  a
+    &:not(.email)
+      display: block
+      margin-top: 24px
+      cursor: pointer
+
+.locker-content
+  margin-top: 75px !important
+  max-width: 420px
+  a
+    color: #999
+  img
+    margin-bottom: 48px
+  span
+    margin-bottom: 32px !important
+  button
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    margin: 32px 0 24px
+    img
+      width: 17px
+      height: 17px
+      margin-right: 16px
+      filter: brightness(2)
+      margin-bottom: 0
+
 .content
   margin: 0 auto
   margin-top: 38px
@@ -32,16 +67,25 @@ h1, h2, h3, h4, h5, h6, p
     font-weight: 600
     font-size: 56px
     margin-bottom: 16px
+  h2
+    font-weight: 600
+    font-size: 32px
+    margin-bottom: 8px
   span
     color: #999
     display: inline-block
     margin-bottom: 16px
   .error
     color: #FB2424
-    margin-top: 5px
+    margin: 5px 0 10px
   &-inputs
     display: flex
     flex-direction: column
+    a
+      font-size: 14px
+      font-weight: 600
+      margin-top: 30px
+      cursor: pointer
     input
       padding: 20px 16px
       border: 1px solid #E6E6E6
@@ -56,15 +100,40 @@ h1, h2, h3, h4, h5, h6, p
         border: 1px solid #4E74F5
 
 .auth-content
-  width: 500px
+  max-width: 500px
   button
     width: 100%
-    margin-top: 32px
-    margin-bottom: 24px
+    margin: 32px 0 24px
   &-btns
     display: flex
-    margin: 16px 0
     button
       width: 50%
+      margin: 16px 0
       &:not(:last-of-type)
         margin-right: 16px
+
+@media ( max-width: 550px )
+  .content
+    h1
+      font-size: 40px
+      margin-bottom: 5px
+    span
+      font-size: 14px
+  .auth-content
+    &-btns
+      display: block
+      button
+        width: 100%
+        img
+          margin-right: auto
+        p
+          margin-right: auto
+
+@media ( max-width: 400px )
+  .confirmation-content
+    max-width: 300px
+    h1
+      font-size: 32px
+    button
+      width: 100%
+      padding: 20px 50px

@@ -9,7 +9,11 @@ function App() {
       <Route exact path='/' component={Login} />
       <Route exact path='/reg' component={Register} />
       <Route exact path='/reset' component={PassReset} />
-      <Route exact path='/confirmation' component={EmailConfirmation} />
+      <Route
+        exact
+        path='/confirmation'
+        render={(props) => <EmailConfirmation {...props} />}
+      />
     </main>
   );
 }

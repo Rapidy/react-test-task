@@ -23,6 +23,7 @@ export default function Login() {
     if (password === 'password2021' && email === 'example@example.com') {
       setError('');
       setValid(true);
+      alert('Авторизован');
     }
 
     if (email.trim() === '' || password === '') {
