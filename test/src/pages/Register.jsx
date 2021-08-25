@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 
 import Button from '../components/Button/Button';
 import Header from '../components/Header/Header';
 
 import facebook from '../assets/img/FacebookLogo.svg';
 import google from '../assets/img/GoogleLogo.svg';
-import { NavLink, Redirect } from 'react-router-dom';
-import EmailConfirmation from './EmailConfirmation';
 
 export default function Login() {
   const [email, setEmail] = useState('');
